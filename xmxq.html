@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>项目详情</title>
+<link rel="stylesheet" type="text/css" href="css/publicStyle.css">
+<link rel="stylesheet" type="text/css" href="css/bannerStyle.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="css/fudongStyle.css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/if.Common.Banner.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/publicJs.js"></script>
+<script type="text/javascript" src="js/fudong.js"></script>
+<script type="text/javascript">
+$(function(){
+//判断滚动条是否超过规定位置并现实浮动nav
+   $(window).scroll(function(){	
+   		//找到要现实浮动nav的元素块，用元素块距离顶部的距离减去浮动nav的高度得到现实浮动nav的实际距离并赋值给e
+		var e=$('.list').offset().top-$('.header_fixed').height()-35;
+		//判断当前滚动条是否超过规定的距离，是则现实元素块，否则隐藏元素块
+		if($(document).scrollTop() >= e){
+			$('.header_fixed').show();
+		}else{
+			$('.header_fixed').hide();
+		};
+	});
+
+	//点击滚动到指定位置
+	$('.header_fixed ul').children('li').on('click',function(){//给每个li添加单击事件
+		//通过当前li的data-id找到相对应的元素块，把相对应元素块距离顶部的距离赋值给h
+		var h = $('#'+$(this).data("id")).offset().top-70;
+		//控制滚动条滑动的位置，h为距离，500为时间（毫秒）
+		$('body,html').animate({scrollTop:h},500);
+	});
+
+})	
+</script>
+<div class="wrap">
+	<!--header-->
+	<div class="header">
+    	<div class="header_top">
+        	<div class="header_top_con">
+                <p><span>ENGLISH</span><span class="on">中文</span></p>
+            </div>
+        </div>
+        <div class="header_bot">
+        	<div class="header_bot_con">
+        		<a href="index.html">
+                <div class="logo">
+                	<img src="images/logo.png" />
+                    <h1>环球金融中心</h1>
+                </div>
+                </a>
+                <ul class="nav">
+                	<a href="index.html"><li><span>首页</span></li></a>
+                    <a href="javascript:;"><li class="active"><span>写字楼详情</span></li></a>
+                    <a href="xmjs.html"><li><span>写字楼图片</span></li></a>
+                    <a href="xmpt.html"><li><span>写字楼配套</span></li></a>
+                    <a href="sypt.html"><li><span>商业配套</span></li></a>
+                    <a href="dlqy.html"><li><span>地理区域</span></li></a>
+                    <a href="zlzx.html"><li><span><h2>租赁中心</h2></span></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end header-->
+    <!--banner-->
+    <div class="banner">
+    	<div id="content">
+            <div id="main" class="clearfix">
+                <div id="index_b_hero">
+                    <div class="hero-wrap">
+                        <ul class="heros clearfix">
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner1.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner2.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner3.jpg">
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="helper">
+                    <a href="javascript:;" class="prev">
+                        <div class="mask-left"></div>
+                    </a>
+                    <a href="javascript:;" class="next">
+                        <div class="mask-right"></div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end banner-->
+    <!-------浮动nav------------>
+    <div class="header_fixed">
+        <ul>
+            <li data-id="huadong1">楼层示意图</li>
+            <li data-id="huadong2">项目参数</li>
+            <li data-id="huadong3">入驻企业</li>
+        </ul>
+    </div>
+    
+    <!--list-->
+    <div class="list">
+    	<div class="list_con">
+            <div class="list_con_top">
+                <a href="index.html">首页</a> > <a href="xmxq.html">写字楼详情</a>
+            </div>
+            <div class="list2">
+            	<h3>北京银泰中心</h3>
+                <p>北京银泰中心总建筑面积约为360,000平方米，中央主楼总高66层、249.9 米，由北京柏悦酒店(Park Hyatt Beijing)和专属府邸式公寓柏悦府(Park Hyatt Penthouses)、现代豪华公寓柏悦居(Park Hyatt Residences)组成；两侧对称配置52层、186 米的超甲级智能写字楼，三栋方形高塔品字矗立，呈鼎足之势。将三栋高塔连为一体的裙房区包含：汇集众多国际奢华品牌店的商场、会议宴会设施、中西餐饮和现代健身Spa 等国际一流设施。位于主楼顶部的柏悦酒店空中大堂，外石材幕墙框架与内玻璃金字塔造型完美结合，演绎了中国灯笼照亮CBD的雄伟气魄。北京银泰中心已成为京城高品位商业、休闲、及娱乐时尚生活目的地。</p> 
+            	<div class="list2_img"><img src="images/list2_img.jpg" width="100%" height="100%" /></div>
+                <div class="list2_top">
+                	<h4>标识释义</h4>                
+                    <p>标识与北京银泰中心建筑外形和谐统一， 是中央主楼顶部 “中国灯笼” 造型的平面诠释。造型方正、简洁有力。这个优雅、独特、鲜明的灯笼标志，代表了能看到和被看到的光，是中国本土历史文化的象征，更是展望北京光明未来的灯塔。</p>
+                    <p>标识图案亦源取中国传统的窗棂结构，由正方形窗棂结构组合成一个立方体，抽象地勾勒出中国灯笼造型。寓意：北京银泰中心是多功能建筑综合体，位于北京商务中心区核心地带，融会了中西文化的精华，创造了一个现代国际经典，更是“世界看中国，中国看世界”的一个窗口。</p>
+                </div>
+                <div class="list2_xiangmu" id="huadong1">
+                	<a class="fancybox" href="images/louceng.png" data-fancybox-group="gallery" title="点击看大图">
+                    <div class="list2_xiangmu_img"><img src="images/louceng.png" width="100%" /></div>
+                    </a>
+                    <div class="list2_xiangmu_txt">
+                    	<h3>楼体高度</h3>
+                        <p>柏悦城：249.9米</p>
+                        <p>银泰写字楼:186米</p>
+                        <p>人保写字楼：186米</p>
+                    </div>
+                </div>
+                <div class="list2_tese">
+                    <div class="tese_div_bj">
+                    	<div class="tese_div">
+                        	<div class="tese_div_left">
+                                <p>
+                                    <img src="images/tese1.png" />&nbsp;
+                                    写字楼
+                                </p>
+                                <b>智能超甲级写字楼</b>
+                            </div>                            
+                            <div class="tese_div_right">
+                                <span>西楼：银泰写字楼</span>
+                                <span>东楼：人保写字楼</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tese_div_bj">
+                    	<div class="tese_div">
+                        	<div class="tese_div_left">
+                                <p>
+                                    <img src="images/tese2.png" />&nbsp;
+                                    北京柏悦酒店
+                                </p>
+                                <b>极致尊贵的酒店&nbsp;细致入微的服务&nbsp;俯瞰京城壮丽美景</b>
+                            </div>                            
+                            <div class="tese_div_right">
+                                <span>66层：北京亮<em>(餐厅)</em></span>
+                                <span>65层：北京亮酒吧</span>
+                                <span>63层：酒店大堂/大堂酒廊</span>
+                                <span>62层：董事会议厅</span>
+                                <span>61层：柏悦厅</span>
+                                <span>60层：酒店客房及套房</span>
+                                <span>59层：健身室/泳池</span>
+                                <span>37-49层：237间酒店客房及套房</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tese_div_bj">
+                    	<div class="tese_div">
+                        	<div class="tese_div_left">
+                                <p>
+                                    <img src="images/tese3.png" />&nbsp;
+                                    柏悦府
+                                </p>
+                                <b>21套专属府邸式公寓</b>
+                            </div>                            
+                            <div class="tese_div_right">
+                                <span>55-58层：柏悦府</span>
+                                <span>35-36层：柏悦府</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tese_div_bj">
+                    	<div class="tese_div">
+                        	<div class="tese_div_left">
+                                <p>
+                                    <img src="images/tese4.png" />&nbsp;
+                                    柏悦居
+                                </p>
+                                <b>216套现代豪华公寓</b>
+                            </div>                            
+                            <div class="tese_div_right">
+                                <span>7-33层：柏悦居</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tese_div_bj">
+                    	<div class="tese_div" style="border:none;">
+                        	<div class="tese_div_left">
+                                <p>
+                                    <img src="images/tese5.png" />&nbsp;
+                                    悦·生活
+                                </p>
+                                <b>全新概念的高品位商业、休闲、健身、美食及娱乐生活目的地</b>
+                            </div>                            
+                            <div class="tese_div_right">
+                                <span>6层：悦·健身中心/秀<em>(屋顶花园酒吧)</em>/天池水疗中心</span>
+                                <span>5层：主席台<em>豪华贵宾中餐厅</em></span>
+                                <span>3层：宴会厅/悦轩/商场</span>
+                                <span>2层：商场</span>
+                                <span>1层：商场</span>
+                                <span>地下1层：商场/悦食悦香<em>(国际美食广场)</em></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="list2_txt" id="huadong2">
+                	<h3>项目参数</h3>
+                    <ul>
+                    	<li>
+                        	<span style="border:none;">物业: 第一太平戴维斯物业</span>
+                            <span style="border:none;">层数: 地上52层，地下4层</span>
+                        </li>
+                        <li>
+                        	<span>层高: 2.7-4米</span>
+                            <span>车位: 1,600 个</span>
+                        </li>
+                        <li>
+                        	<span>网络: 电信、联通 </span>
+                            <span>电梯: 每楼12台客梯</span>
+                        </li>
+                        <li>
+                        	<span>空调: 全空气系统</span>
+                            <span>实用率: 70%</span>
+                        </li>
+                    </ul>
+                    <b>了解更多参数</b>
+                    <div class="list2_tab">
+                    	<table width="100%" border="1">
+                          <tr>
+                            <td rowspan = "3" width="300px">总建筑面积</td>
+                            <td>总面积：349,998平米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>地上建筑面积：263,708平方米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>地下建筑面积：86,290平方米</td>
+                          </tr>
+                          <tr>
+                            <td>规划用地面积</td>
+                            <td>31,305平方米</td>
+                          </tr>
+                          <tr>
+                            <td>地上建筑面积</td>
+                            <td>263,708平方米</td>
+                          </tr>
+                          <tr>
+                            <td>地下建筑面积</td>
+                            <td>86,290平方米</td>
+                          </tr>
+                          <tr>
+                            <td>建筑高度</td>
+                            <td>249.9米</td>
+                          </tr>
+                          <tr>
+                            <td rowspan = "2">建筑层数</td>
+                            <td>地上部分：52层</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>地下部分：4层</td>
+                          </tr>
+                          <tr>
+                            <td rowspan = "2">结构</td>
+                            <td>核心简墙：钢筋混凝土结构（无柱空间设计）</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>墙面：胶乳漆墙面</td>
+                          </tr>
+                          <tr>
+                            <td rowspan = "3">标准办公楼层建筑面积/高度</td>
+                            <td>约2,101平方米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>建筑层高：4米，净高（架空地板到吊顶）：2.7米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>架空地板高：150毫米</td>
+                          </tr>
+                          <tr>
+                            <td rowspan = "3">贸易楼层建筑面积/高度</td>
+                            <td>约2,101平方米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>建筑层高：4米，净高（架空地板到吊顶）：2.7米</td>
+                          </tr>
+                          <tr>
+                            
+                            <td>架空地板高：150毫米</td>
+                          </tr>
+                          <tr>
+                            <td>最小分割面积</td>
+                            <td>约250平方米</td>
+                          </tr>
+                          <tr>
+                            <td>停车位</td>
+                            <td>1,600个</td>
+                          </tr>
+                        </table>
+                        <i>收起</i>
+                    </div>
+                 
+                    <div class="pingmian_bj">
+                    	<a class="fancybox" href="images/pingmian1.jpg" data-fancybox-group="gallery" title="点击看大图">
+                        <img src="images/pingmian1.jpg" />
+                        </a>
+                        <p>办公楼1层平面图</p>
+                        <a class="fancybox" href="images/pingmian2.jpg" data-fancybox-group="gallery" title="点击看大图">
+                        <img src="images/pingmian2.jpg" />
+                        </a>
+                        <p>办公楼地下室1层平面图</p>
+                        <a class="fancybox" href="images/pingmian3.jpg" data-fancybox-group="gallery" title="点击看大图">
+                        <img src="images/pingmian3.jpg" />
+                        </a>
+                        <p>写字楼三层经连廊与南裙楼国际会议中心相接，分割成不同规格的会议室</p>
+                        
+                    </div>
+                    
+                </div>                
+                                
+            </div>
+            <!--list6-->
+            <div class="ruzhuqiye" id="huadong3">
+            	<h3>入驻企业</h3>
+            	<ul>
+                	<li><img src="images/ruzhu_01.png" /></li>
+                    <li><img src="images/ruzhu_02.png" /></li>
+                    <li><img src="images/ruzhu_03.png" /></li>
+                    <li><img src="images/ruzhu_04.png" /></li>
+                    <li><img src="images/ruzhu_05.png" /></li>
+                    <li><img src="images/ruzhu_06.png" /></li>
+                    <li><img src="images/ruzhu_07.png" /></li>
+                    <li><img src="images/ruzhu_08.png" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end list-->
+    <!--foot-->
+    <div class="foot">
+    	<div class="foot_top">
+        	<div class="foot_top_txt">
+            	 <a href="http://www.china-yintai.com" target="_blank"><span>银泰在中国</span></a>
+                 <a href="http://www.600683.com" target="_blank"><span>京投银泰</span></a>
+                 <a href="http://www.yintai.com" target="_blank"><span>银泰网</span></a>
+                 <a href="http://www.intime.com.cn" target="_blank"><span>银泰百货</span></a>
+                 <a href="http://www.in88.com" target="_blank"><span>北京王府井银泰in88</span></a>
+                 <a href="http://ahyt.intime.com.cn" target="_blank"><span>合肥银泰中心</span></a>
+                 <a href="http://beijing.park.hyatt.com" target="_blank"><span>北京柏悦酒店</span></a>
+                 <a href="http://ningbo.park.hyatt.com" target="_blank"><span>宁波柏悦酒店</span></a>
+                 <a href="http://shanghai.andaz.hyatt.com" target="_blank"><span>上海安达仕酒店</span></a>
+            </div>
+        </div>
+        <div class="foot_mid">
+        	<div class="foot_con tel">
+            	<h4>租赁电话</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con wuye">
+            	<h4>物业管理</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con dizhi">
+            	<h4>北京银泰中心</h4>
+                <p>北京市朝阳区</p>
+                <p>朝阳区建国门外大街2号</p>
+            </div>            
+        </div>
+        <div class="foot_bot">
+        	<div class="foot_bot_con">
+            	<span>© 2014 SOHO中国版权所有。 京ICP备05014360号</span>
+            </div>
+        </div>
+    </div>
+    <!--end foot-->    
+</div>
+</body>
+</html>
