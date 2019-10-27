@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>地理区域</title>
+<link rel="stylesheet" type="text/css" href="css/publicStyle.css">
+<link rel="stylesheet" type="text/css" href="css/bannerStyle.css">、
+<link rel="stylesheet" type="text/css" href="css/fudongStyle.css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/if.Common.Banner.js"></script>
+<script type="text/javascript" src="js/publicJs.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/fudong.js"></script>
+<script type="text/javascript">
+$(function(){
+	//判断滚动条是否超过规定位置并现实浮动nav
+   $(window).scroll(function(){	
+   		//找到要现实浮动nav的元素块，用元素块距离顶部的距离减去浮动nav的高度得到现实浮动nav的实际距离并赋值给e
+		var e=$('.list').offset().top-$('.header_fixed').height()-35;
+		//判断当前滚动条是否超过规定的距离，是则现实元素块，否则隐藏元素块
+		if($(document).scrollTop() >= e){
+			$('.header_fixed').show();
+		}else{
+			$('.header_fixed').hide();
+		};
+	});
+
+	//点击滚动到指定位置
+	$('.header_fixed ul').children('li').on('click',function(){//给每个li添加单击事件
+		//通过当前li的data-id找到相对应的元素块，把相对应元素块距离顶部的距离赋值给h
+		var h = $('#'+$(this).data("id")).offset().top-70;
+		//控制滚动条滑动的位置，h为距离，500为时间（毫秒）
+		$('body,html').animate({scrollTop:h},500);
+	});
+})
+</script>
+<div class="wrap">
+	<!--header-->
+	<div class="header">
+    	<div class="header_top">
+        	<div class="header_top_con">
+                <p><span>ENGLISH</span><span class="on">中文</span></p>
+            </div>
+        </div>
+        <div class="header_bot">
+        	<div class="header_bot_con">
+        		<a href="index.html">
+                <div class="logo">
+                	<img src="images/logo.png" />
+                    <h1>环球金融中心</h1>
+                </div>
+                </a>
+                <ul class="nav">
+                	<a href="index.html"><li><span>首页</span></li></a>
+                    <a href="xmxq.html"><li><span>写字楼详情</span></li></a>
+                    <a href="xmjs.html"><li><span>写字楼图片</span></li></a>
+                    <a href="xmpt.html"><li><span>写字楼配套</span></li></a>
+                    <a href="sypt.html"><li><span>商业配套</span></li></a>
+                    <a href="javascript:;"><li class="active"><span>地理区域</span></li></a>
+                    <a href="zlzx.html"><li><span><h2>租赁中心</h2></span></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end header-->
+    <!--banner-->
+    <div class="banner">
+    	<div id="content">
+            <div id="main" class="clearfix">
+                <div id="index_b_hero">
+                    <div class="hero-wrap">
+                        <ul class="heros clearfix">
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner1.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner2.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner3.jpg">
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="helper">
+                    <a href="javascript:;" class="prev">
+                        <div class="mask-left"></div>
+                    </a>
+                    <a href="javascript:;" class="next">
+                        <div class="mask-right"></div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end banner-->
+    <!-------浮动nav------------>
+    <div class="header_fixed">
+        <ul>
+            <li data-id="huadong1" style="width:25%;">广域地图</li>
+            <li data-id="huadong2" style="width:25%;">区域地图</li>
+            <li data-id="huadong3" style="width:25%;">微交通地图</li>
+            <li data-id="huadong4" style="width:25%;">交通指南</li>
+        </ul>
+    </div>
+    
+    <!--list-->
+    <div class="list">
+    	<div class="list_con">
+            <div class="list_con_top">
+                <a href="index.html">首页</a> > <a href="sypt.html">地理区域</a>
+            </div>
+            <div class="list6">
+            	<h3>地理位置</h3>
+                <div class="list6_txt">
+                	<p style="text-indent:2em;">银泰写字楼位于北京银泰中心西翼，交通出行十分便捷，写字楼与地铁1号线、 10号线无缝连接； 地下通道连廊又将北京银泰中心与CBD众多商务楼宇有机连接，人们无需步出地面，即可畅达CBD核心区主要目的地。</p>
+                	<div class="list6_img list6_one_img">
+                        <img src="images/quyu.jpg" />
+                    </div>
+                    <p id="huadong1">广域地图</p>
+                    <div class="list6_img">
+                        <img src="images/jt1.jpg" />
+                    </div>
+                    <p id="huadong2">区域地图</p>
+                    <div class="list6_img">
+                        <img src="images/jt2.jpg" />
+                    </div>
+                    <p id="huadong3">微交通地图</p>
+                    <div class="list6_img">
+                        <img src="images/jt3.jpg" />
+                    </div>
+                    <h4 id="huadong4">交通信息</h4>
+                    <p>自驾车<br>
+                        从西边来<br>                        
+                        选择一：<br>                      
+                        沿长安街向东，过建国门外大街永安里路口走辅路，过SK大厦正门右转，约50米左转到达北京银泰中心入口。<br>
+                        选择二：<br>                        
+                        沿长安街向东，过建国门外大街永安里路口走辅路，左侧依次见贵友大厦、建国饭店、京伦饭店，到国贸桥下右转，约100米右转入口就是北京银泰中心。<br>
+                        从北边来<br>                        
+                        选择一：<br>                        
+                        过京广桥，由光华路/国贸中心出口进入东三环中路辅路，直行过国贸桥向南后约20米向右进辅路，沿辅路直行进入景恒街约100米处即是北京银泰中心南入口。<br>                        
+                        选择二：<br>                        
+                        过京广桥，由光华路/国贸中心出口进入东三环中路辅路，直行过国贸桥向南开到通惠河北路红灯并右转，约200米处第2个路口右转进入恒惠东路(建外SOHO),直行过第一个红灯，直行约50米处右侧即是北京银泰中心入口。<br>
+                        从南边来<br>                        
+                        过双井桥，从光华路/国贸中心/通惠河北路出口进入东三环中路辅路，直行到通惠河北路左转，200米处第2个路口右转进入恒惠东路(建外SOHO)，直行过第一个红灯，直行约50米处右侧即是北京银泰中心入口。<br>
+                        从东边来<br>                        
+                        自四环方向：<br>                        
+                        走四惠桥往通惠河北路方向，向西行驶快到三环路见北京电视台的出口进入辅路，穿过三环路，继续沿辅路行驶200米处第2个路口右转进入恒惠东路(建外SOHO)，直行过第一个红灯，直行约50米处右侧即是北京银泰中心入口。<br>
+                        自大望路方向：<br>                        
+                        选择一：<br>                        
+                        沿建国路向西到国贸桥左转，直行过国贸桥向南后约20米向右进辅路，沿辅路直行进入景恒街约100米处即是北京银泰中心南入口。<br>                        
+                        选择二：<br>                        
+                        沿建国路向西，到国贸桥左转，向南开到通惠河北路红灯并右转，约200米处第2个路口右转进入恒惠东路(建外SOHO)，直行过第一个红灯，直行约50米处右侧即是北京银泰中心入口。<br>
+                        乘地铁<br>                        
+                        1号线：<br>                        
+                        国贸站下车，C或D出口出站，进入北京银泰中心。<br>                        
+                        10号线：<br>                        
+                        国贸站下车，步行至换乘1号线，从1号线C或D出口出站，进入北京银泰中心。</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!--end list-->
+    <!--foot-->
+    <div class="foot">
+    	<div class="foot_top">
+        	<div class="foot_top_txt">
+            	 <a href="http://www.china-yintai.com" target="_blank"><span>银泰在中国</span></a>
+                 <a href="http://www.600683.com" target="_blank"><span>京投银泰</span></a>
+                 <a href="http://www.yintai.com" target="_blank"><span>银泰网</span></a>
+                 <a href="http://www.intime.com.cn" target="_blank"><span>银泰百货</span></a>
+                 <a href="http://www.in88.com" target="_blank"><span>北京王府井银泰in88</span></a>
+                 <a href="http://ahyt.intime.com.cn" target="_blank"><span>合肥银泰中心</span></a>
+                 <a href="http://beijing.park.hyatt.com" target="_blank"><span>北京柏悦酒店</span></a>
+                 <a href="http://ningbo.park.hyatt.com" target="_blank"><span>宁波柏悦酒店</span></a>
+                 <a href="http://shanghai.andaz.hyatt.com" target="_blank"><span>上海安达仕酒店</span></a>
+            </div>
+        </div>
+        <div class="foot_mid">
+        	<div class="foot_con tel">
+            	<h4>租赁电话</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con wuye">
+            	<h4>物业管理</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con dizhi">
+            	<h4>北京银泰中心</h4>
+                <p>北京市朝阳区</p>
+                <p>朝阳区建国门外大街2号</p>
+            </div>            
+        </div>
+        <div class="foot_bot">
+        	<div class="foot_bot_con">
+            	<span>© 2014 SOHO中国版权所有。 京ICP备05014360号</span>
+            </div>
+        </div>
+    </div>
+    <!--end foot-->
+</div>
+</body>
+</html>

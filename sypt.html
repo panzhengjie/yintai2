@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商业配套</title>
+<link rel="stylesheet" type="text/css" href="css/publicStyle.css">
+<link rel="stylesheet" type="text/css" href="css/bannerStyle.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="css/fudongStyle.css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/if.Common.Banner.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/publicJs.js"></script>
+<script type="text/javascript" src="js/fudong.js"></script>
+<script type="text/javascript">
+$(function(){
+//判断滚动条是否超过规定位置并现实浮动nav
+   $(window).scroll(function(){	
+   		//找到要现实浮动nav的元素块，用元素块距离顶部的距离减去浮动nav的高度得到现实浮动nav的实际距离并赋值给e
+		var e=$('.list').offset().top-$('.header_fixed').height()-35;
+		//判断当前滚动条是否超过规定的距离，是则现实元素块，否则隐藏元素块
+		if($(document).scrollTop() >= e){
+			$('.header_fixed').show();
+		}else{
+			$('.header_fixed').hide();
+		};
+	});
+
+	//点击滚动到指定位置
+	$('.header_fixed ul').children('li').on('click',function(){//给每个li添加单击事件
+		//通过当前li的data-id找到相对应的元素块，把相对应元素块距离顶部的距离赋值给h
+		var h = $('#'+$(this).data("id")).offset().top-70;
+		//控制滚动条滑动的位置，h为距离，500为时间（毫秒）
+		$('body,html').animate({scrollTop:h},500);
+	});
+
+})
+</script>
+<div class="wrap">
+	<div class="header">
+    	<div class="header_top">
+        	<div class="header_top_con">
+                <p><span>ENGLISH</span><span class="on">中文</span></p>
+            </div>
+        </div>
+        <div class="header_bot">
+        	<div class="header_bot_con">
+        		<a href="index.html">
+                <div class="logo">
+                	<img src="images/logo.png" />
+                    <h1>环球金融中心</h1>
+                </div>
+                </a>
+                <ul class="nav">
+                	<a href="index.html"><li><span>首页</span></li></a>
+                    <a href="xmxq.html"><li><span>写字楼详情</span></li></a>
+                    <a href="xmjs.html"><li><span>写字楼图片</span></li></a>
+                    <a href="xmpt.html"><li><span>写字楼配套</span></li></a>
+                    <a href="javascript:;"><li class="active"><span>商业配套</span></li></a>
+                    <a href="dlqy.html"><li><span>地理区域</span></li></a>
+                    <a href="zlzx.html"><li><span><h2>租赁中心</h2></span></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end header-->
+    <!-------浮动nav------------>
+    <div class="header_fixed">
+        <ul>
+            <li data-id="huadong1">酒店概括</li>
+            <li data-id="huadong2">餐饮及娱乐</li>
+            <li data-id="huadong3">会议与健身</li>
+        </ul>
+    </div>
+    
+    <!--banner-->
+    <div class="banner">
+    	<div id="content">
+            <div id="main" class="clearfix">
+                <div id="index_b_hero">
+                    <div class="hero-wrap">
+                        <ul class="heros clearfix">
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner1.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner2.jpg">
+                            </a>
+                            </li>
+                            <li class="hero">
+                            <a href="javascript:;">
+                                <img src="images/banner3.jpg">
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="helper">
+                    <a href="javascript:;" class="prev">
+                        <div class="mask-left"></div>
+                    </a>
+                    <a href="javascript:;" class="next">
+                        <div class="mask-right"></div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end banner-->
+    <!--list-->
+    <div class="list">
+    	<div class="list_con">
+            <div class="list_con_top">
+                <a href="index.html">首页</a> > <a href="sypt.html">商业配套</a>
+            </div>
+            <div class="list5">
+            	<h3>配套与周边</h3>
+                <div class="list5_txt">
+                	<p>银泰写字楼设专属通道连接北京柏悦酒店、北京银泰中心商场、写字楼客户、访客尊享北京柏悦酒店和北京银泰中心商场的配套设施，会议室、健康水疗、室内泳池、酒吧、特色餐厅、 屋顶花园酒吧——一切精彩近在咫尺，高效满足商务人士工作 、生活、休闲、娱乐、 购物等各项需求。 同时，银泰写字楼拥有独立临街出入口，确保高尚办公环境与秩序。
+
+ </p>
+                	<div class="list5_img">
+                    	<img src="images/jiudian.jpg" />
+                    </div>
+                    <h4 id="huadong1">酒店概括</h4>
+                    <p>柏悦酒店 Park Hyatt 是凯悦酒店集团旗下极致尊贵的精品型酒店，卓越的建筑设计融合高品位的艺术精髓，宽大的客房、考究而细腻的装饰和设施，为客人提供高雅的私人氛围及超凡的个人体验。 北京柏悦酒店位于长安街第一高厦北京银泰中心的中央主楼， 是凯悦在大中华地区首家柏悦酒店。</p>
+                    <p>北京柏悦酒店提供现代豪华的设施以及细致入微的服务，客人们可享受高品位的商业、 休闲、健身、美食及娱乐生活。 酒店所在的北京银泰中心主楼顶部为 “中国灯笼” 的造型，入夜后，灯光璀璨，如灯塔般光芒四射。北京柏悦酒店的内部设计灵感来源于经典的水上花园的风格，揉合了东方美学观念和时尚雅致的现代理念。</p>
+                    <p>北京柏悦酒店设246间豪华客房(包括25间套房)，客房面积由45至240平方米(480至2,580平方英尺)，所有客房的设计极富现代感且简约实用。酒店拥有长安街上最高的餐厅北京亮，在享用国际风味的美食之余，还可360度视角俯瞰北京的文化古都风貌韵致和现代都市迷人景观。酒店还包括北京的时尚娱乐热点、屋顶花园式酒吧——秀，气势恢宏的大宴会厅和宅邸式多功能厅——悦轩，康体设施包括Spa水疗中心等。</p>
+                    <h4 id="huadong2">餐饮及娱乐</h4>
+                    <ul>
+                    	<li>
+                        	<img src="images/small-img-01.jpg" />                            
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>北京亮</span>
+                                <em>
+                                	66层 | 北京亮<br>
+                            		位于酒店顶层的背景亮提供世界各地的风味佳肴，360度俯瞰北京全貌，美景尽入眼帘。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-02.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>大堂酒廊</span>
+                                <em>
+                                	63层 | 大堂酒廊<br>
+                            		绝佳的会晤场所，为客人提供全天侯用餐设施。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-03.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>北京亮酒吧</span>
+                                <em>
+                                	65层 | 北京亮酒吧<br>
+                            		充满现代气息的爵士酒吧，供应多样的顶级葡萄酒，香槟与经典调酒。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-04.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>秀</span>
+                                <em>
+                                	6层 | 秀(屋顶花园酒吧)<br>
+                            		屋顶花园酒吧，一处结合了餐饮、主题酒吧与丰富夜生活的娱乐热点。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-05.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>悦食悦香</span>
+                                <em>
+                                	LG层 | 悦食悦香<br>
+                            		时尚美食市集的轻松用餐环境。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-06.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>主席台中餐厅</span>
+                                <em>
+                                	5层 | 主席台中餐厅<br>
+                            		主席台设有16间专属私人贵宾厅，提供精致粤菜与主厨私房料理。
+                                </em>                            	
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 id="huadong3">会议设施</h4>
+                    <ul>
+                    	<li>
+                        	<img src="images/small-img-07.jpg" />                            
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>董事会议厅 | 柏悦厅</span>
+                                <em>
+                                	62层 | 董事会议厅  61层 | 柏悦厅<br>
+                            		举办董事会议和专属私密会议的理想场所。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-08.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>宴会厅</span>
+                                <em>
+                                	3层 | 宴会厅<br>
+                            		无柱宽阔的气派空间，适用于大型宴会、产品发布会、时装展和汽车展等。
+                                </em>                            	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-09.jpg" />
+                            <div class="list5_txt_fudong">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>悦轩</span>
+                                <em>
+                                	3层 | 悦轩<br>
+                            		气度卓越的格局、极致完美的陈设、时尚典雅的设计、私人府邸式的尊贵体验。
+                                </em>                            	
+                            </div>
+                        </li>
+                    </ul>
+                    <h4>健身</h4>
+                    <ul>
+                    	<li>
+                        	<img src="images/small-img-10.jpg" />                            
+                            <div class="list5_txt_fudong1">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>空中泳池</span>
+                                                           	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-11.jpg" />
+                            <div class="list5_txt_fudong1">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>天池</span>
+                                                           	
+                            </div>
+                        </li>
+                        <li>
+                        	<img src="images/small-img-12.jpg" />
+                            <div class="list5_txt_fudong1">
+                            	<div class="list5_txt_fudong_top"></div>
+                                <span>悦·健身中心</span>
+                                                           	
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            	<div class="list5_bot">
+                	<h4>10分钟步行圈</h4>
+                    <ul>
+                    	<li>
+                        	<img src="images/sypt_list1.png" />
+                            <p>地铁/公交</p>
+                            <div class="xing_bj">
+                            	<span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <em>约&nbsp;<b>6</b>&nbsp;个站点</em>
+                            <ul>
+                            	<li>北京儿童医院</li>
+                                <li>购物中心</li>
+                                <li>金融街购物中心</li>
+                                <li>都城隍庙</li>
+                                <li>投资广场</li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<img src="images/sypt_list2.png" />
+                            <p>快餐</p>
+                            <div class="xing_bj">
+                            	<span></span><span></span><span></span><i></i><i></i>
+                            </div>
+                            <em>约&nbsp;<b>25</b>&nbsp;家快餐</em>
+                            <ul>
+                            	<li>赛百味</li>
+                                <li>面香居</li>
+                                <li>玫瑰园</li>
+                                <li>香江悦</li>
+                                <li>武圣羊杂割</li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<img src="images/sypt_list3.png" />
+                            <p>餐厅</p>
+                            <div class="xing_bj">
+                            	<span></span><span></span><span></span><i></i><i></i>
+                            </div>
+                            <em>约&nbsp;<b>25</b>&nbsp;家餐厅</em>
+                            <ul>
+                            	<li>外婆家</li>
+                                <li>俏江南</li>
+                                <li>西坝莜面村</li>
+                                <li>俏江南</li>
+                                <li>潮堂</li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<img src="images/sypt_list4.png" />
+                            <p>银行</p>
+                            <div class="xing_bj">
+                            	<span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <em>约&nbsp;<b>33</b>&nbsp;家银行</em>
+                            <ul>
+                            	<li>中国建设银行</li>
+                                <li>中信银行</li>
+                                <li>交通银行</li>
+                                <li>工商银行</li>
+                                <li>招商银行</li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<img src="images/sypt_list5.png" />
+                            <p>酒店</p>
+                            <div class="xing_bj">
+                            	<span></span><i></i><i></i><i></i><i></i>
+                            </div>
+                            <em>约&nbsp;<b>4</b>&nbsp;个酒店</em>
+                            <ul>
+                            	<li>黑龙江宾馆</li>
+                                <li>北京王哥家庭旅馆</li>
+                                <li>北京青年酒店白塔店</li>
+                                <li>复兴门北大街5-2号</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end list-->
+    <!--foot-->
+    <div class="foot">
+    	<div class="foot_top">
+        	<div class="foot_top_txt">
+            	 <a href="http://www.china-yintai.com" target="_blank"><span>银泰在中国</span></a>
+                 <a href="http://www.600683.com" target="_blank"><span>京投银泰</span></a>
+                 <a href="http://www.yintai.com" target="_blank"><span>银泰网</span></a>
+                 <a href="http://www.intime.com.cn" target="_blank"><span>银泰百货</span></a>
+                 <a href="http://www.in88.com" target="_blank"><span>北京王府井银泰in88</span></a>
+                 <a href="http://ahyt.intime.com.cn" target="_blank"><span>合肥银泰中心</span></a>
+                 <a href="http://beijing.park.hyatt.com" target="_blank"><span>北京柏悦酒店</span></a>
+                 <a href="http://ningbo.park.hyatt.com" target="_blank"><span>宁波柏悦酒店</span></a>
+                 <a href="http://shanghai.andaz.hyatt.com" target="_blank"><span>上海安达仕酒店</span></a>
+            </div>
+        </div>
+        <div class="foot_mid">
+        	<div class="foot_con tel">
+            	<h4>租赁电话</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con wuye">
+            	<h4>物业管理</h4>
+                <p>4008-123-510</p>
+            </div>
+            <div class="foot_con dizhi">
+            	<h4>北京银泰中心</h4>
+                <p>北京市朝阳区</p>
+                <p>朝阳区建国门外大街2号</p>
+            </div>            
+        </div>
+        <div class="foot_bot">
+        	<div class="foot_bot_con">
+            	<span>© 2014 SOHO中国版权所有。 京ICP备05014360号</span>
+            </div>
+        </div>
+    </div>
+    <!--end foot-->
+</div>
+</body>
+</html>
